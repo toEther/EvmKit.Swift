@@ -20,21 +20,6 @@ class TransactionManager {
         self.transactionProvider = transactionProvider
     }
 
-    private func save(transactions: [Transaction]) {
-        let existingTransactions = storage.transactions(hashes: transactions.map { $0.hash })
-        let existingTransactionMap = Dictionary(existingTransactions.map { ($0.hash, $0) }, uniquingKeysWith: { (first, _) in first })
-
-        let mergedTransactions = transactions.map { transaction in
-            if let existingTransaction = existingTransactionMap[transaction.hash] {
-                return TransactionSyncManager.merge(lhsTransaction: transaction, rhsTransaction: existingTransaction)
-            } else {
-                return transaction
-            }
-        }
-
-        storage.save(transactions: mergedTransactions)
-    }
-
     private func failPendingTransactions() -> [Transaction] {
         let pendingTransactions = storage.pendingTransactions()
 
@@ -56,7 +41,7 @@ class TransactionManager {
             }
         }
 
-        save(transactions: processedTransactions)
+        storage.save(transactions: processedTransactions)
 
         return processedTransactions
     }
@@ -143,7 +128,7 @@ extension TransactionManager {
             return []
         }
 
-        save(transactions: transactions)
+        storage.save(transactions: transactions)
 
         let failedTransactions = failPendingTransactions()
         let transactions = transactions + failedTransactions

@@ -21,7 +21,7 @@ Any EVM blockchain that supports the Ethereum's RPC API and has an Etherscan-lik
 
 - Ethereum
 - Binance Smart Chain
-- Komerco
+- Polygon
 - ArbitrumOne
 - Optimism
 - Avalanche C-Chain
