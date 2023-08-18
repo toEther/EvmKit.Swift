@@ -81,8 +81,8 @@ extension RpcSource {
         .http(urls: [URL(string: "https://data-seed-prebsc-1-s1.binance.org:8545")!], auth: nil)
     }
 
-    public static func polygonRpcHttp() -> RpcSource {
-        .http(urls: [URL(string: "https://polygon-rpc.com")!], auth: nil)
+    public static func komercoRpcHttp() -> RpcSource {
+        .http(urls: [URL(string: "https://rpc.kmcscan.io")!], auth: nil)
     }
 
     public static func avaxNetworkHttp() -> RpcSource {

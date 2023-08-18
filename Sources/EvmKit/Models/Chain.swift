@@ -50,13 +50,13 @@ extension Chain {
         )
     }
 
-    public static var polygon: Chain {
+    public static var komerco: Chain {
         Chain(
-                id: 137,
+                id: 202400,
                 coinType: 60, // actually Matic has coin type 966
                 syncInterval: 15,
                 gasLimit: 10_000_000,
-                isEIP1559Supported: true
+                isEIP1559Supported: false
         )
     }
 

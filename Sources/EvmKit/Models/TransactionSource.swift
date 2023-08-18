@@ -66,10 +66,10 @@ extension TransactionSource {
         )
     }
 
-    public static func polygonscan(apiKey: String) -> TransactionSource {
+    public static func komercoscan(apiKey: String) -> TransactionSource {
         TransactionSource(
-                name: "polygonscan.com",
-                type: .etherscan(apiBaseUrl: "https://api.polygonscan.com", txBaseUrl: "https://polygonscan.com", apiKey: apiKey)
+                name: "www.kmcscan.io",
+                type: .etherscan(apiBaseUrl: "https://www.kmcscan.io", txBaseUrl: "https://www.kmcscan.io", apiKey: apiKey)
         )
     }
 
