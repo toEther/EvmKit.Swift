@@ -66,6 +66,7 @@ extension EtherscanTransactionProvider: ITransactionProvider {
             "action": "txlist",
             "address": address.hex,
             "startblock": startBlock,
+            "start_block": startBlock,
             "sort": "desc"
         ]
 
@@ -79,6 +80,7 @@ extension EtherscanTransactionProvider: ITransactionProvider {
             "action": "txlistinternal",
             "address": address.hex,
             "startblock": startBlock,
+            "start_block": startBlock,
             "sort": "desc"
         ]
 
@@ -104,6 +106,7 @@ extension EtherscanTransactionProvider: ITransactionProvider {
             "action": "tokentx",
             "address": address.hex,
             "startblock": startBlock,
+            "start_block": startBlock,
             "sort": "desc"
         ]
 
@@ -117,6 +120,7 @@ extension EtherscanTransactionProvider: ITransactionProvider {
             "action": "tokennfttx",
             "address": address.hex,
             "startblock": startBlock,
+            "start_block": startBlock,
             "sort": "desc"
         ]
 
@@ -130,6 +134,7 @@ extension EtherscanTransactionProvider: ITransactionProvider {
             "action": "token1155tx",
             "address": address.hex,
             "startblock": startBlock,
+            "start_block": startBlock,
             "sort": "desc"
         ]
 
